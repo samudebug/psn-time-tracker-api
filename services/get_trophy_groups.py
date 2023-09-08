@@ -18,6 +18,7 @@ def get_trophy_groups(ssoKey, title_id):
       "image": trophy.title_icon_url,
       "total_trophies": (trophy_info.defined_trophies.bronze + trophy_info.defined_trophies.silver + trophy_info.defined_trophies.gold + trophy_info.defined_trophies.platinum), 
       "earned_trophies":(trophy_info.earned_trophies.bronze + trophy_info.earned_trophies.silver + trophy_info.earned_trophies.gold + trophy_info.earned_trophies.platinum),
+      "progress": trophy.progress,
       "groups": trophy_groups
       }
   return result
