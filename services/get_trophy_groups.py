@@ -14,6 +14,8 @@ def get_trophy_groups(ssoKey, title_id):
       #   all_trophies.append({"name": defined_trophy.trophy_name, "icon": defined_trophy.trophy_icon_url, "type": defined_trophy.trophy_type.name})
       trophy_groups.append({"name": group.trophy_group_name, "icon": group.trophy_group_icon_url, "group_id": group.trophy_group_id })
     result = {
+      "name": trophy.title_name,
+      "image": trophy.title_icon_url,
       "total_trophies": (trophy_info.defined_trophies.bronze + trophy_info.defined_trophies.silver + trophy_info.defined_trophies.gold + trophy_info.defined_trophies.platinum), 
       "earned_trophies":(trophy_info.earned_trophies.bronze + trophy_info.earned_trophies.silver + trophy_info.earned_trophies.gold + trophy_info.earned_trophies.platinum),
       "groups": trophy_groups
