@@ -11,5 +11,3 @@ def get_stats():
 def get_info():
   token = request.args.get("token")
   return jsonify(get_own_info(token))
-
-app.run(host='0.0.0.0' )
