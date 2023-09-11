@@ -26,4 +26,4 @@ def get_trophies(title_id, group_id):
   token = request.args.get("token")
   language = request.args.get("language")
   return jsonify(get_trophies_by_group(token, title_id, group_id, language=language))
-app.run(host="0.0.0.0")
+
