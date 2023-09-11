@@ -7,5 +7,5 @@ def get_trophies_by_group(ssoKey, title_id, group_id):
   for trophy in trophies:
     defined_trophies = client.trophies(trophy.np_communication_id, platform=trophy.title_platform, trophy_group_id=group_id, include_metadata=True)
     for defined_trophy in defined_trophies:
-      all_trophies.append({"name": defined_trophy.trophy_name, "icon": defined_trophy.trophy_icon_url, "type": defined_trophy.trophy_type.name, "description": defined_trophy.trophy_detail})
+      all_trophies.append({"name": defined_trophy.trophy_name, "icon": defined_trophy.trophy_icon_url, "type": defined_trophy.trophy_type.name, "description": defined_trophy.trophy_detail, "earned": defined_trophy.earned})
   return all_trophies
