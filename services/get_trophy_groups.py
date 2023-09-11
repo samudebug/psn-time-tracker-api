@@ -5,6 +5,7 @@ def get_trophy_groups(ssoKey, title_id):
   trophies = client.trophy_titles_for_title([title_id])
   result = {}
   for trophy in trophies:
+    print(trophy.np_communication_id)
     trophy_info = client.trophy_groups_summary(trophy.np_communication_id, trophy.title_platform, True)
     trophy_groups = []
     for group in trophy_info.trophy_groups:
