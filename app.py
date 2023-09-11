@@ -17,13 +17,12 @@ def get_info():
 @app.route('/get_trophy_groups/<title_id>')
 def get_groups(title_id):
   token = request.args.get("token")
-  
+  language = request.args.get('language')
   # title_id = request.view_args['title_id']
-  return jsonify(get_trophy_groups(token, title_id))
+  return jsonify(get_trophy_groups(token, title_id, language=language))
 
 @app.route('/get_trophies/<title_id>/<group_id>')
 def get_trophies(title_id, group_id):
   token = request.args.get("token")
   language = request.args.get("language")
   return jsonify(get_trophies_by_group(token, title_id, group_id, language=language))
-
